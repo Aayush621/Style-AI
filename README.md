@@ -31,7 +31,7 @@ A fashion product search engine powered by AI that enables both text-to-image an
 1. Clone the repository:
 ```bash
 git clone https://github.com/YOUR_USERNAME/search_ai.git
-cd search_ai
+cd style-ai
 ```
 
 2. Create environment file:
@@ -49,12 +49,8 @@ S3_BUCKET_BASE_URL=your_s3_bucket_url
 ### Docker Deployment (Recommended)
 
 ```bash
-# Build and start all services
-docker-compose up --build
-
 # Access the API
-# App instances: http://localhost:8001, http://localhost:8002, http://localhost:8003
-# Load balancer: http://localhost:80
+# App instances: http://localhost:8000
 ```
 
 ### Local Development
@@ -65,7 +61,7 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install -r app/requirements.txt
+pip install -r requirements.txt
 
 # Run the API server
 cd app
@@ -122,8 +118,6 @@ search_ai/
 │   ├── image_embeddings_aligned.npy
 │   ├── text_embeddings_aligned.npy
 │   └── product_ids_aligned.npy
-├── qdrant_storage/        # Vector database storage
-├── docker-compose.yml     # Multi-service deployment
 └── qdrant_ingestion.py   # Data ingestion script
 ```
 
@@ -146,8 +140,7 @@ This script:
 
 The system uses a microservices architecture:
 
-- **3 App Instances**: Load-balanced FastAPI servers (ports 8001-8003)
-- **Nginx**: Load balancer and reverse proxy (port 80)
+- **App Instance**: FastAPI server (port 8000)
 - **Qdrant**: Vector database for similarity search
 - **CLIP Model**: Text and image embedding generation
 
