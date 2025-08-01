@@ -1,6 +1,7 @@
 # Style-AI
 
-A fashion product search engine powered by AI that enables both text-to-image and image-to-image search capabilities using CLIP embeddings and vector similarity search.
+A fashion product search engine powered by AI that enables both text-to-image and image-to-image search capabilities using CLIP for multimodal embeddings, Qdrant for vector storage and queries, and AWS S3 for image hosting; developed FastAPI backend, Dockerized it, and deployed on AWS ECS.
+Integrated with AWS S3-hosted frontend via AWS CloudFront, secured API with AWS API Gateway for HTTPS, enabling efficient product recommendations.
 
 ## 🔍 Features
 
@@ -15,7 +16,6 @@ A fashion product search engine powered by AI that enables both text-to-image an
 - **Backend**: FastAPI, Python 3.13
 - **AI/ML**: OpenAI CLIP, PyTorch, Sentence Transformers
 - **Vector Database**: Qdrant
-- **Load Balancer**: Nginx
 - **Containerization**: Docker, Docker Compose
 - **Data Processing**: Pandas, NumPy, Pillow
 
