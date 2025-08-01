@@ -23,14 +23,14 @@ Integrated with AWS S3-hosted frontend via AWS CloudFront, secured API with AWS 
 
 ### Prerequisites
 
-- Docker and Docker Compose
+- Docker
 - Python 3.13+ (for local development)
 
 ### Environment Setup
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/search_ai.git
+git clone https://github.com/Aayush621/Style-AI.git
 cd style-ai
 ```
 
